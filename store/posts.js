@@ -10,8 +10,8 @@ export const mutations = {
 };
 
 export const actions = {
-  getPosts(context) {
-    this.$evalApi
+  async getPosts(context) {
+    await this.$evalApi
       .getPosts()
       .then((result) => {
         if (result.data != null) {

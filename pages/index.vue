@@ -21,8 +21,8 @@
 import Logo from "~/components/Logo.vue";
 
 export default {
-  fetch() {
-    this.$store.dispatch("posts/getPosts");
+  async fetch() {
+    await this.$store.dispatch("posts/getPosts");
   },
   components: {
     Logo,
